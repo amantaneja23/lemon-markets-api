@@ -1,0 +1,31 @@
+{
+	"isin": {
+		"type": "string",
+		"required": true,
+		"minlength": 12,
+		"maxlength": 12
+	},
+	"limit_price": {
+		"type": "float",
+		"required": true,
+		"min": 0
+	},
+	"side": {
+		"type": "string",
+		"required": true,
+		"allowed": [
+			"buy",
+			"sell"
+		]
+	},
+	"valid_until": {
+		"type": "integer",
+		"required": true,
+		"min": 0
+	},
+	"quantity": {
+		"type": "integer",
+		"required": true,
+		"min": 0
+	}
+}
