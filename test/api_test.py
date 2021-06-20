@@ -56,7 +56,7 @@ def test_invalid_isin_long_string():
 
 def test_invalid_limit_price_not_float():
 	request = request_schema.copy()
-	request['limit_price'] = "float"
+	request['limit_price'] = 'float'
 	return_code, response = post_orders_request(request)
 	print(str(response))
 	assert return_code == 400
@@ -83,7 +83,7 @@ def test_invalid_side_not_string():
 
 def test_invalid_side_not_valid():
 	request = request_schema.copy()
-	request['side'] = "gamble"
+	request['side'] = 'gamble'
 	return_code, response = post_orders_request(request)
 	print(str(response))
 	assert return_code == 400
@@ -92,7 +92,7 @@ def test_invalid_side_not_valid():
 
 def test_invalid_valid_until_not_integer():
 	request = request_schema.copy()
-	request['valid_until'] = "integer"
+	request['valid_until'] = 'integer'
 	return_code, response = post_orders_request(request)
 	print(str(response))
 	assert return_code == 400
@@ -110,11 +110,11 @@ def test_invalid_valid_until_negative_integer():
 
 def test_invalid_quantity_not_integer():
 	request = request_schema.copy()
-	request['valid_until'] = "long"
+	request['quantity'] = 'long'
 	return_code, response = post_orders_request(request)
 	print(str(response))
 	assert return_code == 400
-	assert 'valid_until' in response['validation_errors']
+	assert 'quantity' in response['validation_errors']
 
 
 def test_invalid_quantity_negative_integer():

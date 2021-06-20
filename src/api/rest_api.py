@@ -12,12 +12,7 @@ api = flask_restful.Api(app)
 
 get_response = {
 	'name': 'Aman Taneja',
-	'id': 'Bulba'
-}
-
-post_response = {
-	'name': 'Ridhi Girdhar',
-	'id': 'Ridhu'
+	'id': '#Bulbasaur'
 }
 
 
